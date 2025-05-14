@@ -1,0 +1,99 @@
+<aiml version="2.0">
+  <category>
+    <pattern>1</pattern>
+    <template>
+      <think><set name="intent">upload</set></think>
+      Option 1: Upload a FASTA file using the form below.
+    </template>
+  </category>
+
+  <category>
+    <pattern>UPLOAD FASTA</pattern>
+    <template>
+      <think><set name="intent">upload</set></think>
+      Sure — you can upload your FASTA file using the form below.
+    </template>
+  </category>
+
+  <category>
+    <pattern>2</pattern>
+    <template>
+      <think><set name="intent">align</set></think>
+      Option 2: Beginning sequence alignment...
+    </template>
+  </category>
+
+  <category>
+    <pattern>SEQUENCE ALIGNMENT</pattern>
+    <template>
+      <think><set name="intent">align</set></think>
+      Running sequence alignment now...
+    </template>
+  </category>
+
+  <category>
+    <pattern>3</pattern>
+    <template>
+      <think><set name="intent">store</set></think>
+      Option 3: Please name the sequence you'd like to store.
+    </template>
+  </category>
+
+  <category>
+    <pattern>STORE</pattern>
+    <template>
+      <think><set name="intent">store</set></think>
+      Please provide a sequence to store.
+    </template>
+  </category>
+
+  <category>
+    <pattern>4</pattern>
+    <template>
+      <think><set name="intent">remove</set></think>
+      Option 4: Which sequence would you like to remove?
+    </template>
+  </category>
+
+  <category>
+    <pattern>REMOVE</pattern>
+    <template>
+      <think><set name="intent">remove</set></think>
+      Please specify the sequence you'd like to remove.
+    </template>
+  </category>
+
+  <category>
+    <pattern>5</pattern>
+    <template>
+      <think><set name="intent">readme</set></think>
+      Option 5: Here's what I can do:
+      <br/>1. Upload FASTA
+      <br/>2. Sequence Alignment
+      <br/>3. Store Sequence
+      <br/>4. Remove Sequence
+      <br/>5. README
+    </template>
+  </category>
+
+  <category>
+    <pattern>README</pattern>
+    <template>
+      <think><set name="intent">readme</set></think>
+      I am Saga, your bioinformatics assistant. I can help you upload and align sequences.
+    </template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <template>
+      <think><set name="intent">unknown</set></think>
+      Sorry, I didn't recognize that. Please select from the following:
+      <br/>1. Upload FASTA
+      <br/>2. Sequence Alignment
+      <br/>3. Store Sequence
+      <br/>4. Remove Sequence
+      <br/>5. README
+    </template>
+  </category>
+</aiml>
